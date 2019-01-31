@@ -1,0 +1,4 @@
+/.idea
+/docker/nginx/logs
+/docker/nginx/conf/mail-sendler.conf
+docker-compose.yml
