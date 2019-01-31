@@ -3,7 +3,6 @@ version: '3'
 services:
     nginx:
         image: nginx:latest
-        container_name: nginx
         ports:
             - "88:80"
         volumes:
@@ -17,6 +16,5 @@ services:
 
     php:
         build: ./docker/php
-        container_name: php-fpm
         volumes:
             - ./code:/var/www/mail-sendler
