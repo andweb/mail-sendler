@@ -18,3 +18,6 @@ services:
         build: ./docker/php
         volumes:
             - ./code:/var/www/mail-sendler
+
+    gearman:
+        image: kendu/gearman
