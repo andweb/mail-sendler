@@ -34,9 +34,9 @@ $client->addServer($config['server'], $config['port']);
  * Email params
  */
 $mail = [
-    'to'            => $_POST['to'] ?? $faker->safeEmail,
-    'subject'       => $_POST['subject'] ?? $faker->text(20),
-    'body'          => $_POST['message'] ?? $faker->text(100),
+    'to'            => $_POST['to'] ?: $faker->safeEmail,
+    'subject'       => $_POST['subject'] ?: $faker->text(20),
+    'body'          => $_POST['message'] ?: $faker->text(100),
     'subscribers'   => 1
 ];
 
@@ -60,7 +60,7 @@ else {
 
     for ($i = 0; $i < $mail['subscribers']; $i++) {
 
-        $mail['to'] = $faker->safeEmail . PHP_EOL;
+        $mail['to'] = $faker->safeEmail;
 
         // Low priority
         $client->doLowBackground ('sendmail', json_encode($mail));

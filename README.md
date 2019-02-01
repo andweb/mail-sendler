@@ -21,3 +21,8 @@ Start worker
 ```
 bash worker.sh
 ```
+
+Start worker with debug mode
+```
+bash worker-d.sh
+```

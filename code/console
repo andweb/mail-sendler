@@ -2,12 +2,19 @@
 <?php
 
 use Symfony\Component\Console\Application;
-use App\Command\QueueMailSendler;
+use App\Command\AppSendMailCommand;
+use App\Services\QueueMailWorker;
 
 require __DIR__.'/vendor/autoload.php';
 
+$config = require __DIR__ . '/config/config.php';
+
 $application = new Application();
 
-$application->add(new QueueMailSendler());
+$application->add(
+    new AppSendMailCommand(
+        new QueueMailWorker($config)
+    )
+);
 
 $application->run();
