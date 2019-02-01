@@ -1,11 +1,8 @@
 # mail-sendler
 
+Setup
 ```
-cp docker-compose.yml.example docker-compose.yml
-```
-
-```
-docker-compose up -d --build
+bash install.sh
 ```
 
 Open URL: 
@@ -13,7 +10,14 @@ Open URL:
 http://0.0.0.0:88
 ```
 
-Install Gearman Monitor
+Install Gearman Monitor (optional)
+
+http://0.0.0.0:88/monitor/
 ```
 bash monitor.sh
+```
+
+Start worker
+```
+bash worker.sh
 ```
