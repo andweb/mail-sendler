@@ -12,3 +12,8 @@ Open URL:
 ```
 http://0.0.0.0:88
 ```
+
+Install Gearman Monitor
+```
+bash monitor.sh
+```
