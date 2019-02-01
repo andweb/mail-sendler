@@ -1,0 +1,9 @@
+<?php
+
+$i = 0;
+$cfgServers = array();
+
+$cfgServers[$i]['address'] = 'gearman';
+$cfgServers[$i]['name'] = '';
+++ $i;
+

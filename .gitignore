@@ -1,6 +1,5 @@
 /.idea
 /code/public/monitor/
-!/code/public/monitor/_config.php.example
 /docker/nginx/logs
 /docker/nginx/conf/mail-sendler.conf
 docker-compose.yml
