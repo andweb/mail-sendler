@@ -48,7 +48,7 @@ class QueueMailWorker implements QueueWorkerContract
         });
 
         /** SMTP PHP mailer */
-        $this->mailer = new PHPMailer(true); // Passing `true` enables exceptions
+        $this->mailer = new PHPMailer($this->debug); // Passing `true` enables exceptions
     }
 
     /**
