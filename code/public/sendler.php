@@ -28,7 +28,7 @@ function returnJSON(array $data, $status = 'OK') {
 $faker = Factory::create();
 
 $client = new GearmanClient();
-$client->addServer($config['server'], $config['port']);
+$client->addServer($config['queue']['server'], $config['queue']['port']);
 
 /**
  * Email params
@@ -54,7 +54,7 @@ if (isset($_GET['high'])) {
  */
 else {
     unset($mail['to']);
-    $mail['subscribers'] = mt_rand(10,20);
+    $mail['subscribers'] = mt_rand(10, 20);
 
     returnJSON($mail);
 
